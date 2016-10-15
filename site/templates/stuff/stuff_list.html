@@ -1,0 +1,11 @@
+<h1>List of Stuff</h1>
+<ul>
+    {% for stuff in object_list %}
+    <li>{{ stuff }}  :  
+    <a href="{% url "stuff_edit" stuff.id %}">Edit</a>
+    <a href="{% url "stuff_delete" stuff.id %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "stuff_new" %}">Make New Stuff</a>
